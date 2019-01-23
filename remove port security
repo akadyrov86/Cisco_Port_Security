@@ -1,0 +1,14 @@
+Lotus-MDF-P1#clear port-security sticky
+Lotus-MDF-P1#config t
+Lotus-MDF-P1(config)#interface gigabitEthernet 1/0/1
+Lotus-MDF-P1(config-if)#shut
+Lotus-MDF-P1(config-if)#no shut
+
+Add more device to Port
+interface gigabitEthernet 1/0/2
+switchport mode access
+switchport port-security
+switchport port-security maximum 2
+switchport port-security mac-address sticky
+no shut
+exit
